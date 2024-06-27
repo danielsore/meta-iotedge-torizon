@@ -1,0 +1,13 @@
+diff --git a/recipes-core/aziotd/files/aziot-certd.service b/recipes-core/aziotd/files/aziot-certd.service
+index b9ad2ea..27b7ab2 100644
+--- a/recipes-core/aziotd/files/aziot-certd.service
++++ b/recipes-core/aziotd/files/aziot-certd.service
+@@ -5,7 +5,7 @@ After=aziot-certd.socket
+ 
+ [Service]
+ Environment="AZIOT_LOG=error"
+-Environment="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/rust"
++Environment="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/rustlib/aarch64-tdx-linux-gnu/lib"
+ ExecStart=/usr/bin/aziot-certd
+ KillMode=process
+ Restart=on-failure
